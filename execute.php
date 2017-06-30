@@ -2,6 +2,7 @@
 $content = file_get_contents("php://input");
 $update = json_decode($content, true);
 
+
 if(!$update)
 {
   exit;
@@ -23,9 +24,10 @@ $response = '';
 if($text  === "/question")
 {
 	$response = $username." ha fatto una domanda!";
+  $oldDate = $date;
 }
 else if($text === "/repeat"){
-  $response = $username." ha fatto una domanda in data ".$date;
+  $response = $username." ha fatto una domanda in data ".$oldDate;
 
 }
 

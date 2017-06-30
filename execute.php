@@ -22,7 +22,7 @@ $text = strtolower($text);
 $response = '';
 if($text  === "/question")
 {
-	$response = "Hai fatto una domanda!";
+	$response = $username." ha fatto una domanda!";
 }
 
 

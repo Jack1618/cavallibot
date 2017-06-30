@@ -24,6 +24,10 @@ if($text  === "/question")
 {
 	$response = $username." ha fatto una domanda!";
 }
+else if($text === "/repeat"){
+  $response = $username." ha fatto una domanda in data ".$date;
+
+}
 
 
 header("Content-Type: application/json");

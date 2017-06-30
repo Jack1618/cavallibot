@@ -24,12 +24,13 @@ $text = strtolower($text);
 $response = '';
 if($text  === "/question")
 {
-	$response = $username." ha fatto una domanda!";
+	$response = $username." ha fatto una domanda! data: ".$oldDate;
   $oldDate = $date;
+
+
 }
 else if($text === "/repeat"){
   $response = $username." ha fatto una domanda in data ".$oldDate;
-
 }
 
 

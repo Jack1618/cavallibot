@@ -7,17 +7,6 @@ if(!$update)
   exit;
 }
 
-$response = "";
-
-if(strpos($text, "/question") === 0){
-
-$response = "Hai fatto una domanda";
-}
-
-$parameters = array('chat_id' => $chatId, "text" => $response);
-$parameters["method"] = "sendMessage";
-echo json_encode($parameters);
-
 $message = isset($update['message']) ? $update['message'] : "";
 $messageId = isset($message['message_id']) ? $message['message_id'] : "";
 $chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
@@ -30,20 +19,7 @@ $text = isset($message['text']) ? $message['text'] : "";
 $text = trim($text);
 $text = strtolower($text);
 
-$response = "";
-
-if(strpos($text, "/question") === 0){
-
-$response = "Hai fatto una domanda";
-}
-
-$parameters = array('chat_id' => $chatId, "text" => $response);
-$parameters["method"] = "sendMessage";
-echo json_encode($parameters);
-
-
-
-/*header("Content-Type: application/json");
+header("Content-Type: application/json");
 $parameters = array('chat_id' => $chatId, "text" => $text);
 $parameters["method"] = "sendMessage";
-echo json_encode($parameters);*/
+echo json_encode($parameters);
